@@ -106,7 +106,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: ./bigc/rest
+        url: ./bigc
         values:
           name: ${{ parameters.appName }}
           groupId: ${{ parameters.groupId }}
