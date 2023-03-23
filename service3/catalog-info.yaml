@@ -5,7 +5,7 @@ metadata:
   name: bigC-svc3
   description: BigC service
   annotations:
-    backstage.io/techdocs-ref: 
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: production
@@ -13,5 +13,3 @@ spec:
   system: bigc
   providesApis:
     - bigc-api
-    - internal/streetlights
-    - hello-world
