@@ -41,7 +41,6 @@ spec:
           title: Type of BigC app
           type: string
           description: Type of the component
-          description: The volume type to be used
           default: rest
           enum:
             - rest
@@ -111,6 +110,7 @@ spec:
     # Each step executes an action, in this case one templates files into the working directory.
     - id: fetch-base
       name: Fetch Base
+      if: ${{ parameters.appType === "rest" }}
       action: fetch:template
       input:
         url: https://github.com/ckiddy/my-test/tree/main/bigc
