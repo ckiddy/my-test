@@ -4,6 +4,8 @@ kind: Component
 metadata:
   name: bigC-svc3
   description: BigC service
+  annotations:
+    backstage.io/techdocs-ref: 
 spec:
   type: service
   lifecycle: production
