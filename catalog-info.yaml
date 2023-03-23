@@ -20,6 +20,9 @@ metadata:
   annotations:
     github.com/bigC-docs-folder: docs
     github.com/bigC-docs-branch: develop
+    backstage.io/source-location: url:https://github.com/ckiddy/my-test
+    jenkins.io/job-full-name: folder-name/job-name
+    backstage.io/code-coverage: scm-only
 spec:
   owner: mybig-team
   domain: technology
