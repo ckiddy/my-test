@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lib1
+  description: lib1 - core features
+  annotations:
+    github.com/project-slug: ckiddy/my-test/lib1
+spec:
+  type: library
+  lifecycle: production
+  system: bigC
+  owner: mybig-team
