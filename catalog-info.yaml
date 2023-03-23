@@ -35,4 +35,15 @@ spec:
   lifecycle: production
   system: bigC
   owner: mybig-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ckiddy
+spec:
+  profile:
+    displayName: C Kiddy
+    email: jenny-doe@example.com
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf: [mybig-team]
   
