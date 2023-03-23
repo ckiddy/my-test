@@ -33,3 +33,27 @@ spec:
                     type: array
                     items: 
                       type: string
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bigC-api1-db
+  description: Stores data
+spec:
+  type: database
+  owner: mybig-team
+  system: bigC
+  dependencyOf: 
+    - API:bigC-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bigC-api1-s3
+  description: Stores files
+spec:
+  type: s3-bucket
+  owner: mybig-team
+  system: bigC
+  dependencyOf: 
+    - API:bigC-api
