@@ -1,11 +1,37 @@
 apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: mybig-team
+  description: Does some big stuffs
+spec:
+  type: team
+  profile:
+    displayName: My Big Team
+    email: test@test.com
+  children: []
+  members:
+    - ckiddy # C Kiddy
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: bigC
+  description: bigC is so big
+  annotations:
+    github.com/bigC-docs-folder: docs
+    github.com/bigC-docs-branch: develop
+spec:
+  owner: mybig-team
+  domain: technology
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-test
+  name: mybig_Component
   annotations:
     github.com/project-slug: ckiddy/my-test
 spec:
   type: other
   lifecycle: unknown
-  owner: ckiddy
+  owner: mybig-team
   
