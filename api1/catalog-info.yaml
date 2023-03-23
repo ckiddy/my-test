@@ -3,6 +3,12 @@ kind: API
 metadata:
   name: bigC-api
   description: bigC api
+  links:
+    - url: https://github.com/ckiddy
+      title: My API dashboard
+      icon: dashboard
+  annotations:
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: openapi
   lifecycle: production
