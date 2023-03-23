@@ -41,9 +41,16 @@ spec:
           title: Type of BigC app
           type: string
           description: Type of the component
-          ui:autofocus: true
-          ui:options:
-            rows: 5
+          description: The volume type to be used
+          default: rest
+          enum:
+            - rest
+            - guest
+            - standard
+          enumNames:
+            - 'Rest'
+            - 'Guest'
+            - 'Standart'
         groupId:
           title: App Group Id
           type: string
