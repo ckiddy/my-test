@@ -33,6 +33,7 @@ spec:
                     type: array
                     items: 
                       type: string
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
