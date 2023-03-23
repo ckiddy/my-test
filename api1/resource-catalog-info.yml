@@ -7,3 +7,5 @@ spec:
   type: database
   owner: mybig-team
   system: bigC
+  dependencyOf: 
+    - API:bigC-api
