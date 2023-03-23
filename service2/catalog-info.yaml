@@ -1,0 +1,15 @@
+# Example:
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bigC-svc2
+  namespace: bigc
+  description: BigC service
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:mybig-team
+  providesApis:
+    - bigc-api
+    - internal/streetlights
+    - hello-world
