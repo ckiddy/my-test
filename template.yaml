@@ -2,9 +2,9 @@ apiVersion: scaffolder.backstage.io/v1beta3
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
-  name: example-nodejs2-template
-  title: Example Node.js2 Template
-  description: An example template for the scaffolder that creates a simple Node.js service
+  name: bigC-generate-Template
+  title: BigC Generate Template
+  description: An template for the scaffolder that creates the application based on BigC framework
 spec:
   owner: user:ckiddy
   type: service
@@ -14,12 +14,75 @@ spec:
   parameters:
     - title: Fill in some steps
       required:
-        - name
+        - appName
       properties:
-        name:
-          title: Name
+        appName:
+          title: App Name
           type: string
           description: Unique name of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        appId:
+          title: App Id
+          type: string
+          description: Id of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        lwcVersion:
+          title: BigC Version
+          type: string
+          description: BigC Version of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        appType:
+          title: Type of BigC app
+          type: string
+          description: Type of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        groupId:
+          title: App Group Id
+          type: string
+          description: GroupId of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        artifactId:
+          title: App Artifact Id
+          type: string
+          description: ArtifactId of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        package:
+          title: App Package
+          type: string
+          description: Package of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        appVersion:
+          title: App Version
+          type: string
+          description: Version of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        appDomain:
+          title: App Domain
+          type: string
+          description: Domain of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        appFilePrefix:
+          title: App File Prefix
+          type: string
+          description: FilePrefix of the component
           ui:autofocus: true
           ui:options:
             rows: 5
@@ -43,9 +106,12 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: ./content
+        url: ./bigc/rest
         values:
-          name: ${{ parameters.name }}
+          name: ${{ parameters.appName }}
+          groupId: ${{ parameters.groupId }}
+          filePrefix: ${{ parameters.appFilePrefix }}
+          package: ${{ parameters.package }}
 
     # This step publishes the contents of the working directory to GitHub.
     - id: publish
