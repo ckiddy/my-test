@@ -7,17 +7,3 @@ spec:
   type: database
   owner: mybig-team
   system: bigC
-  dependencyOf: 
-    - bigC-api
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: bigC-api1-s3
-  description: Stores files on S3
-spec:
-  type: s3-bucket
-  owner: mybig-team
-  system: bigC
-  dependencyOf: 
-    - bigC-api
