@@ -6,7 +6,7 @@ metadata:
   title: BigC Generate Template
   description: An template for the scaffolder that creates the application based on BigC framework
 spec:
-  owner: user:ckiddy
+  owner: group:mybig-team
   type: service
 
   # These parameters are used to generate the input form in the frontend, and are
