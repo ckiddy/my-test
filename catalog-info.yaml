@@ -63,7 +63,7 @@ spec:
   system: bigC
   owner: mybig-team
   subcomponentOf:
-    - Component:anybig-svc
+    - anybig-svc
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
