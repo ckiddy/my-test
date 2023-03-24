@@ -62,11 +62,13 @@ spec:
   lifecycle: production
   system: bigC
   owner: mybig-team
+  partOf:
+    - component:anybig-svc
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: anybig_svc
+  name: anybig-svc
   links:
     - url: https://github.com/ckiddy
       title: My API dashboard
@@ -79,7 +81,7 @@ spec:
   lifecycle: production
   system: bigC
   owner: mybig-team
-  consumesApi:
+  dependsOn:
     - API:auth-api
     - API:config-api
 ---
