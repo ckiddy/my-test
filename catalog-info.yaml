@@ -28,7 +28,7 @@ kind: System
 metadata:
   name: bigC
   description: bigC is so big
-  inks:
+  links:
     - url: https://github.com/ckiddy
       title: My API dashboard
       icon: dashboard
@@ -50,7 +50,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: mybig_Component
-  inks:
+  links:
     - url: https://github.com/ckiddy
       title: My API dashboard
       icon: dashboard
@@ -63,7 +63,7 @@ spec:
   system: bigC
   owner: mybig-team
   partOf:
-    - component:anybig-svc
+    - Component:anybig-svc
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -167,3 +167,15 @@ spec:
                     type: array
                     items: 
                       type: string
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bigC-common-resource
+  description: Stores common constants
+spec:
+  type: constant
+  owner: mybig-team
+  system: bigC
+  dependencyOf: 
+    - API:config-api
