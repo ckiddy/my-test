@@ -62,8 +62,7 @@ spec:
   lifecycle: production
   system: bigC
   owner: mybig-team
-  subcomponentOf:
-    - anybig-svc
+  subcomponentOf: anybig-svc
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
